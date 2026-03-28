@@ -36,5 +36,5 @@ if (resultSpeed && remainingMeows && footerCount) {
 
     resultSpeed.textContent = selectedMeow;
     remainingMeows.textContent = remaining;
-    footerCount.textContent = selectedMeow;
+    footerCount.textContent = remaining;
 }

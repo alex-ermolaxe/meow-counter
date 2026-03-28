@@ -216,6 +216,7 @@ body.result-page {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-top: 24px;
 }
 
 .result-title {
@@ -269,8 +270,8 @@ body.result-page {
 }
 
 .row2 .result-block {
-    flex: 1 1 36%;
-    max-width: 36%;
+    flex: 1 1 32%;
+    max-width: 32%;
     min-width: 0;
 }
 
@@ -289,7 +290,7 @@ body.result-page {
 }
 
 .result-footer {
-    padding: 18px 0;
+    padding: 24px 0 32px;
     color: #333;
     font-size: 1.25rem;
     font-weight: 700;

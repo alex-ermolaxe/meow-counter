@@ -18,9 +18,23 @@ if (calculateButton && slider) {
     });
 }
 
-const resultValue = document.getElementById('result-value');
-if (resultValue) {
+const resultSpeed = document.getElementById('result-speed');
+const remainingMeows = document.getElementById('remaining-meows');
+const footerCount = document.getElementById('footer-count');
+
+if (resultSpeed && remainingMeows && footerCount) {
     const params = new URLSearchParams(window.location.search);
-    const meow = params.get('meow') || '5';
-    resultValue.textContent = `${meow} мяу в минуту`;
+    const selectedMeow = Number(params.get('meow')) || 5;
+
+    const now = new Date();
+    const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+    const tbilisiNow = new Date(utc + 4 * 60 * 60000);
+    const targetTbilisi = new Date(Date.UTC(2026, 3, 25, 11, 0, 0));
+
+    const diffMinutes = Math.max(0, Math.ceil((targetTbilisi.getTime() - tbilisiNow.getTime()) / 60000));
+    const remaining = selectedMeow > 0 ? Math.max(0, Math.ceil(diffMinutes / selectedMeow)) : 0;
+
+    resultSpeed.textContent = selectedMeow;
+    remainingMeows.textContent = remaining;
+    footerCount.textContent = selectedMeow;
 }

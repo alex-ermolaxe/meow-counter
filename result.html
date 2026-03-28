@@ -7,12 +7,39 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="result-page">
-    <div class="result-content">
-        <div class="result-card">
-            <h1>Результат</h1>
-            <p>Ты выбрал частоту мяуканья:</p>
-            <div id="result-value" class="result-value">5 мяу вминуту</div>
-        </div>
+    <div class="result-container">
+        <header class="result-header">
+            <h1 class="result-title">Твоя скорость мяукания <span id="result-speed">0.08</span> мяу в секунду.</h1>
+            <p class="result-subtitle">Это значит, что осталось всего <span id="remaining-meows">55</span> мяуканий до того чтобы...</p>
+        </header>
+
+        <section class="row1">
+            <div class="result-block">
+                <img src="images/cats_first_meet.png" alt="Встреча">
+                <p>Наконец-то вретиться лично!</p>
+            </div>
+            <div class="result-block">
+                <img src="images/cats_with_wine.jpg" alt="Вино">
+                <p>Поболтать за бокальчиком вина!</p>
+            </div>
+            <div class="result-block">
+                <img src="images/cats_chilling.png" alt="Чиллим">
+                <p>Вместе расчиллиться под одеялкой!</p>
+            </div>
+        </section>
+
+        <section class="row2">
+            <div class="result-block">
+                <img src="images/cats_massage.png" alt="Массаж">
+                <p>Сделать друг другу массаж лапок...а может быть и не только!</p>
+            </div>
+            <div class="result-block">
+                <img src="images/cats_sleep_together.png" alt="Сон">
+                <p>Помочь друг другу выспаться и проснуться вместе!</p>
+            </div>
+        </section>
+
+        <footer class="result-footer">Скучаю и очень жду, когда ты промяукаешь <span id="footer-count">0.08</span> раз!</footer>
     </div>
     <script src="js/main.js"></script>
 </body>
